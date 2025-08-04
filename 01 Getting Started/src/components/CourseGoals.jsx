@@ -1,39 +1,32 @@
-import {
-  GrInstall,
-  GrEdit,
-  GrTerminal,
-  GrResources,
-  GrUserExpert,
-  GrKey,
-} from 'react-icons/gr';
+import { GrInstall, GrEdit, GrTerminal, GrResources, GrUserExpert, GrKey } from "react-icons/gr";
 
-import CourseGoal from './CourseGoal';
-import classes from './CourseGoals.module.css';
+import CourseGoal from "./CourseGoal";
+import classes from "./CourseGoals.module.css";
 
 const GOALS = [
   {
     icon: <GrInstall />,
-    text: 'Learn how to install & start Cypress',
+    text: "Learn how to install & start Cypress",
   },
   {
     icon: <GrEdit />,
-    text: 'Learn how to write tests with Cypress',
+    text: "Learn how to write tests with Cypress",
   },
   {
     icon: <GrTerminal />,
-    text: 'Understand the core Cypress features & commands',
+    text: "Understand the core Cypress features & commands",
   },
   {
     icon: <GrResources />,
-    text: 'Customize & configure Cypress for your requirements',
+    text: "Customize & configure Cypress for your requirements",
   },
   {
     icon: <GrUserExpert />,
-    text: 'Learn how to write good tests & follow best practices',
+    text: "Learn how to write good tests & follow best practices",
   },
   {
     icon: <GrKey />,
-    text: 'Dive into more complex problems - e.g., user authentication testing',
+    text: "Dive into more complex problems - e.g., user authentication testing",
   },
 ];
 
