@@ -29,6 +29,7 @@ function NewTask({ onAddTask, onCancel }) {
       summary: enteredSummary,
       category: chosenCategory,
     };
+    console.log(taskData);
     onAddTask(taskData);
   }
 
