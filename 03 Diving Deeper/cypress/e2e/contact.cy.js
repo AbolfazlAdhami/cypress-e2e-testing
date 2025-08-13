@@ -36,11 +36,16 @@ describe("contact form", () => {
         expect(el.text()).to.not.equal("Sending...");
         expect(el.text()).to.equal("Send Message");
       });
+    // cy.screenshot();
     cy.get('[data-cy="contact-input-message"]').as("msgInput");
     cy.get("@msgInput").focus().blur();
     cy.get("@msgInput")
       .parent()
-      .then((el) => {
+      .should("have.attr", "class")
+      .and("match", /invalid/);
+    cy.get("@msgInput")
+      .parent()
+      .should((el) => {
         expect(el.attr("class")).to.not.be.undefined;
         expect(el.attr("class")).to.include("invalid");
       });
@@ -52,6 +57,7 @@ describe("contact form", () => {
         expect(el.attr("class")).not.to.be.undefined;
         expect(el.attr("class")).contains("invalid");
       });
+    // cy.screenshot();
     cy.get('[data-cy="contact-input-email"]').focus().blur();
     cy.get('[data-cy="contact-input-email"]')
       .parent()
